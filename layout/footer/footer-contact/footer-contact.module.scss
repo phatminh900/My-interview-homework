@@ -1,0 +1,40 @@
+@import "@variables/variables";
+.footer {
+  &__title {
+    color: var(--text-white);
+    font-size: var(--sm-md-font-size);
+    margin-bottom: var(--gutter-component-md);
+  }
+  &__info-box {
+    display: flex;
+    gap: 10px;
+    color: var(--text-grey-light);
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__social-info {
+    display: flex;
+    margin-top: var(--gutter-component-md);
+    gap: var(--gutter-component-sm);
+    @media screen and (max-width: $large-screen) {
+      justify-content: center;
+    }
+  }
+  &__social-media {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    & svg {
+      color: #fff;
+      font-size: var(--base-font-size);
+    }
+  }
+}

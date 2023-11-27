@@ -1,0 +1,31 @@
+@import "@variables/variables";
+.footer {
+  &__title {
+    color: var(--text-white);
+    font-size: var(--sm-md-font-size);
+    margin-bottom: var(--gutter-component-md);
+  }
+  &__recent-box {
+    gap: 12px;
+    @media screen and (max-width: $medium-screen) {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: auto;
+    }
+  }
+  &__recent-img {
+    height: 125px;
+    width: 125px;
+    @media screen and (max-width: $large-screen) {
+      height: 85px;
+      width: 85px;
+    }
+    @media screen and (max-width: $medium-screen) {
+      height: 200px;
+      width: 100%;
+    }
+    @media screen and (max-width: $small-screen) {
+      height: 130px;
+      width: 100%;
+    }
+  }
+}

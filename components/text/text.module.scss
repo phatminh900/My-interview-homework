@@ -1,0 +1,12 @@
+.text {
+  &--title {
+    font-weight: 700;
+    font-size: var(--lg-font-size);
+    color: var(--text-black);
+  }
+  &--subTitle {
+    font-weight: 500;
+    font-size: var(--base-font-size);
+    color: var(--text-grey);
+  }
+}

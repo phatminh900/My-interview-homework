@@ -1,0 +1,27 @@
+@import "@variables/variables";
+.footer {
+  &__copyright {
+    max-width: var(--max-width-container);
+    margin: var(--gutter-container-md) auto 0 auto;
+    padding: 32px 32px 0 32px;
+    border-top: 1px solid #222;
+    font-size: var(--sm-font-size);
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-grey-light);
+    @media screen and (max-width: $large-screen) {
+      flex-direction: column;
+      gap: var(--gutter-component);
+    }
+    a {
+      color: inherit;
+    }
+    &--links {
+      display: flex;
+      gap: var(--gutter-component-sm);
+      @media screen and (max-width: $large-screen) {
+        order: -1;
+      }
+    }
+  }
+}

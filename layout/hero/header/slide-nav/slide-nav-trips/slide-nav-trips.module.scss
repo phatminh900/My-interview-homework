@@ -1,0 +1,37 @@
+.slide-nav {
+  &__trips {
+    margin-top: var(--gutter-container);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-component-md);
+  }
+  &__trip {
+    display: block;
+    height: 200px;
+    &:hover {
+      transform: translate(0, 0) !important;
+    }
+  }
+
+  &__price {
+    padding: 4px 6px !important;
+    top: 50%;
+    font-size: var(--sm-font-size);
+    transform: translateY(-50%);
+  }
+  &__detail {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 15;
+    & svg {
+      font-size: var(--base-font-size) !important;
+    }
+  }
+  &__trip-title {
+    color: var(--text-white) !important;
+    font-weight: 700;
+    font-size: var(--sm-md-font-size);
+    // position: relative;
+  }
+}

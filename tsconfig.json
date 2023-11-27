@@ -19,9 +19,16 @@
       }
     ],
     "paths": {
+      "@variables/*": ["./app/_variables.scss"],
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "layout/footer/footer-contact/footer-contact.data.tss"
+  ],
   "exclude": ["node_modules"]
 }

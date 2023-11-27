@@ -1,0 +1,16 @@
+.ribbon {
+  position: absolute;
+  font-size: var(--base-font-size);
+  background-color: var(--color-primary);
+  color: var(--text-white);
+  text-align: center;
+  padding: 8px;
+  z-index: 10;
+  font-weight: 700;
+  text-transform: capitalize;
+  &__sale-price {
+    text-decoration: line-through;
+    margin-right: 6px;
+    opacity: 0.6;
+  }
+}

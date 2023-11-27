@@ -1,0 +1,23 @@
+.footer {
+  &__title {
+    color: var(--text-white);
+    font-size: var(--sm-md-font-size);
+    margin-bottom: var(--gutter-component-md);
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--gutter-component-md);
+  }
+  &__img-box {
+    position: relative;
+    height: 100px;
+    margin-top: var(--gutter-container-md);
+    & > img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+    }
+  }
+}

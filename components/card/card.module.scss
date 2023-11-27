@@ -1,0 +1,13 @@
+.card {
+  border-radius: var(--border-radius);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s;
+  &:hover {
+    transform: translate(0, var(--translate-y-up));
+  }
+  &::after {
+    content: "";
+  }
+}

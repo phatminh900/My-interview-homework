@@ -1,0 +1,6 @@
+.img_box {
+  gap: var(--gutter-component);
+  & > * {
+    height: 300px;
+  }
+}

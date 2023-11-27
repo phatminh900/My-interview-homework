@@ -1,0 +1,92 @@
+@import "@variables/variables";
+.img-box {
+  display: grid;
+  gap: var(--gutter-component);
+  transition: transform 0.2s;
+  @media screen and (max-width: $medium-screen) {
+    grid-template-columns: 1fr;
+  }
+  &__box {
+    z-index: 10;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.4s;
+
+    &:hover {
+      box-shadow: 0 12px 24px 12px rgba(0, 0, 0, 0.2);
+
+      transform: translate(0, var(--translate-y-up));
+    }
+    &:hover .img-box__ribbon {
+      transform: scale(1.1);
+    }
+  }
+  &__img {
+    height: 260px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    @media screen and (max-width: $large-screen) {
+      height: 200px;
+    }
+    @media screen and (max-width: $medium-screen) {
+      height: 400px;
+      object-fit: cover;
+    }
+    @media screen and (max-width: $small-screen) {
+      height: 250px;
+      object-fit: cover;
+    }
+    &:hover {
+      transform: translate(0, 0);
+    }
+  }
+  &__ribbon {
+    bottom: 6%;
+    left: 0%;
+    transition: transform 0.1s;
+  }
+
+  &__content {
+    padding: 5px 15px 15px 15px;
+    margin-top: var(--gutter-component-sm);
+    &--info {
+      margin-bottom: var(--gutter-component-sm);
+    }
+    &--title {
+      margin-bottom: 6px;
+
+      font-weight: 700;
+      font-size: var(--md-font-size);
+      @media screen and (max-width: $large-screen) {
+        font-size: var(--lg-font-size);
+      }
+    }
+    &--description {
+      font-size: var(--sm-font-size);
+      @media screen and (max-width: $large-screen) {
+        font-size: var(--md-font-size);
+      }
+    }
+
+    &--review-duration {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--sm-font-size);
+      @media screen and (max-width: $large-screen) {
+        font-size: var(--base-font-size);
+      }
+    }
+    &--review {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    &--duration {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+}

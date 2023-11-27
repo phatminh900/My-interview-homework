@@ -1,0 +1,19 @@
+@import "@variables/variables";
+.footer {
+  color: var(--text-white);
+  background-color: #000;
+  padding: 50px 0;
+  &__box {
+    max-width: var(--max-width-container);
+    margin: var(--gutter-component) auto;
+    gap: var(--gutter-component);
+    padding: 0 var(--gutter-padding-horizontal);
+
+    @media screen and (max-width: $medium-screen) {
+      grid-template-columns: 1fr !important;
+    }
+    // @media screen and (max-width: $medium-screen) {
+    //   padding: 50px 30px;
+    // }
+  }
+}

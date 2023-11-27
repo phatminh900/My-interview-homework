@@ -1,0 +1,15 @@
+@import "@variables/variables";
+.stars {
+  display: flex;
+  align-items: center;
+  & svg {
+    color: var(--text-grey);
+    font-size: var(--sm-font-size);
+    @media screen and (max-width: $large-screen) {
+      font-size: var(--base-font-size);
+    }
+  }
+  &--active svg {
+    color: var(--color-secondary) !important;
+  }
+}

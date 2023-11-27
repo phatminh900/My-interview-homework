@@ -1,0 +1,101 @@
+@import "@variables/variables";
+.slide-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  align-items: center;
+  z-index: 101;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  &.un-active {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  &__nav {
+    position: absolute;
+    height: 100vh;
+
+    padding: 35px;
+
+    width: 350px;
+    box-sizing: border-box;
+
+    top: 0;
+    z-index: 102;
+    overflow-y: auto;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in;
+    @media screen and (max-width: $medium-screen) {
+      width: 250px;
+      padding: 25px;
+    }
+    &.active {
+      transform: translate(0, 0);
+    }
+    &.un-active {
+      transform: translate(100%, 0);
+    }
+    &::-webkit-scrollbar {
+      width: 6px; /* Set a small width */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent; /* Hide the thumb */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent; /* Hide the track */
+    }
+  }
+  &__close-btn-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__close-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    align-self: flex-end;
+    font-size: var(--lg-font-size);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      transform: translateY(var(--translate-y-up));
+    }
+  }
+
+  //   smoke effect
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 50px 1px rgba(255, 255, 255, 0.6),
+      inset 0 0 20px 5px rgba(255, 255, 255, 0.6),
+      inset 0 0 10px 5px rgba(255, 255, 255, 0.6);
+    z-index: 1; /* Ensure the pseudo-element is above the container content */
+  }
+}

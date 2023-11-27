@@ -1,0 +1,49 @@
+@import "@variables/variable";
+.nav {
+  &,
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-component-md);
+  }
+  &__list {
+    font-size: var(--sm-font-size);
+    color: var(--text-white);
+    &--icon {
+      color: inherit;
+      @media screen and (max-width: $large-screen) {
+        & svg {
+          font-size: var(--lg-font-size);
+        }
+      }
+
+      & svg {
+        font-size: var(--sm-md-font-size);
+        color: var(--text-white);
+      }
+    }
+    &--cart {
+      position: relative;
+      &::after {
+        content: attr(data-cart-quantity);
+        position: absolute;
+        top: -30%;
+        right: -30%;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        display: flex;
+        font-size: var(--sm-font-size);
+        justify-content: center;
+        align-items: center;
+        color: var(--text-white);
+        background-color: var(--color-primary);
+      }
+    }
+    @media screen and (max-width: $large-screen) {
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+}

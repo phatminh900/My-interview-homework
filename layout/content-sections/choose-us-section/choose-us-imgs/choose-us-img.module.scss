@@ -1,0 +1,15 @@
+@import "@variables/variables";
+
+.img-box {
+  gap: var(--gutter-container-md);
+  @media screen and (max-width: $medium-screen) {
+    grid-template-columns: 1fr;
+  }
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-component-md);
+  text-align: center;
+  align-items: center;
+}

@@ -1,0 +1,29 @@
+@import "@variables/variables";
+.section {
+  max-width: var(--max-width-container);
+  margin: var(--gutter-container) auto;
+  @media screen and (max-width: $huge-screen) {
+    padding: 10px var(--gutter-padding-horizontal);
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: var(--gutter-container-md);
+  }
+  &__title {
+    font-size: 38px;
+
+    @media screen and (min-width: $huge-screen) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: $x-large-screen) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: $medium-screen) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: $small-screen) {
+      font-size: 28px;
+    }
+  }
+}

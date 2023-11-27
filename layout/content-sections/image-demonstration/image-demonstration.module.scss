@@ -1,0 +1,12 @@
+.box {
+  height: 60vh;
+  width: 100vw !important;
+  position: relative;
+  & img {
+    background-position: 50% 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+}

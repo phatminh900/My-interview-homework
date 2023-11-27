@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  &--1 {
+    grid-template-columns: 1;
+  }
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &--6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  &--7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  &--8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  &--9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}

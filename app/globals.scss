@@ -1,0 +1,123 @@
+@import "@variables/variable";
+
+:root {
+  --color-primary: #ff4a52;
+  --color-secondary: #1ec6b6;
+  --max-width-container: 1245px;
+  --gutter-container: 75px;
+  --gutter-container-md: 50px;
+  --gutter-container-sm: 25px;
+  --gutter-component: 30px;
+  --gutter-component-md: 20px;
+  --gutter-component-sm: 12px;
+  --border-radius: 8px;
+  --text-black: #000;
+  --text-white: #fff;
+  --text-grey: #8d9195;
+  --text-grey-light: #ccc;
+  --translate-y-up: -4px;
+  --bg-color: #fff;
+  --box-shadow: 0 22px 40px rgba(0, 0, 0, 0.15);
+  --gutter-padding-horizontal: 90px;
+  --base-font-size: 16px;
+  --sm-md-font-size: 18px;
+  --lg-font-size: 26px;
+  --md-font-size: 20px;
+  --sm-font-size: 14px;
+  --tiny-font-size: 12px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: var(--base-font-size);
+
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: var(--text-black);
+}
+.text-black {
+  color: var(--text-black);
+}
+.text-white {
+  color: var(--text-white);
+}
+.text-grey {
+  color: var(--text-grey);
+}
+
+@media screen and (max-width: $x-large-screen) {
+  :root {
+    --base-font-size: 15px;
+    --sm-md-font-size: 17px;
+    --lg-font-size: 25px;
+    --md-font-size: 19px;
+    --sm-font-size: 11px;
+    --max-width-container: 960px;
+    --gutter-container: 65px;
+    --gutter-container-md: 40px;
+    --gutter-container-sm: 15px;
+    --gutter-component: 20px;
+    --gutter-component-md: 10px;
+    --gutter-component-sm: 8px;
+    --gutter-padding-horizontal: 60px;
+  }
+}
+@media screen and (min-width: $huge-screen) {
+  :root {
+    --base-font-size: 18px;
+    --sm-md-font-size: 20px;
+    --lg-font-size: 28px;
+    --md-font-size: 22px;
+    --sm-font-size: 14px;
+    // --gutter-padding-horizontal: 60px;
+  }
+  body {
+    font-size: var(--base-font-size);
+  }
+}
+@media screen and (max-width: $medium-screen) {
+  :root {
+    --base-font-size: 14px;
+    --sm-md-font-size: 16px;
+    --lg-font-size: 24px;
+    --md-font-size: 18px;
+    --sm-font-size: 10px;
+    --gutter-container: 55px;
+    --gutter-container-md: 30px;
+    --gutter-container-sm: 10px;
+    --gutter-component: 15px;
+    --gutter-component-md: 10px;
+    --gutter-component-sm: 8px;
+    --gutter-padding-horizontal: 30px;
+  }
+}
+@media screen and (max-width: $small-screen) {
+  :root {
+    --gutter-padding-horizontal: 20px;
+  }
+}
