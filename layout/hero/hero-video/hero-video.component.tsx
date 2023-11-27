@@ -5,7 +5,7 @@ const HeroVideo = () => {
     <div className={styles.box}>
       <iframe
         className={styles.video}
-        src="https://www.youtube.com/embed/JPe2mwq96cw?autohide=1&rel=0&autoplay=1&playsinline=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&origin=http://localhost:5173/"
+        src="https://www.youtube.com/embed/JPe2mwq96cw?autohide=1&rel=0&autoplay=1&playsinline=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&origin=https://my-interview-homework.vercel.app/"
         allow="autoplay; muted"
         allowFullScreen
         title="video"
